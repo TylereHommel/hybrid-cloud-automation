@@ -1,0 +1,40 @@
+site: hq
+site_supernet: 10.10.0.0/16
+
+ansible_connection: ansible.netcommon.network_cli
+ansible_network_os: cisco.ios.ios
+ansible_user: automation
+
+dns_servers: 
+  - 10.10.30.31
+  - 10.10.30.32
+
+ntp_servers: 
+  - 10.10.30.21
+  - 10.10.30.22
+
+vlans:
+  - id: 10
+    name: "Users"
+    subnet: 10.10.10.0/24
+    gateway: 10.10.10.254
+  - id: 20
+    name: "Voice"
+    subnet: 10.10.20.0/24
+    gateway: 10.10.20.254
+  - id: 30
+    name: "Servers"
+    subnet: 10.10.30.0/24
+    gateway: 10.10.30.254
+  - id : 40
+    name: "IOT"
+    subnet: 10.10.40.0/24
+    gateway: 10.10.40.254
+  - id: 50
+    name: "Guest"
+    subnet: 10.10.50.0/24
+    gateway: 10.10.50.254
+  - id: 99
+    name: "Management"
+    subnet: 10.10.99.0/24
+    gateway: 10.10.99.254

@@ -1,0 +1,23 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Ansible temporary/retry files
+*.retry
+
+# Secrets
+*.vault
+.env
+
+# Terraform - for later
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# OS/editor junk
+.DS_Store
+.vscode/
