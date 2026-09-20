@@ -1,0 +1,17 @@
+---
+- name: Configure web servers
+  hosts: webservers
+  gather_facts: true
+
+  tasks:
+    - name: Create web application directory
+      ansible.builtin.file:
+        path: /tmp/acme-web
+        state: directory
+        mode: '0755'
+
+    - name: Create web application marker
+      ansible.builtin.copy:
+        content: "Acme web server configured by Ansible\n"
+        dest: /tmp/acme-web/status.txt
+        mode: '0644'

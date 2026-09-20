@@ -1,0 +1,17 @@
+---
+- name: Configure database servers
+  hosts: databases
+  gather_facts: true
+
+  tasks:
+    - name: Create database application directory
+      ansible.builtin.file:
+        path: /tmp/acme-db
+        state: directory
+        mode: '0755'
+
+    - name: Create database application marker
+      ansible.builtin.copy:
+        content: "Acme database server configured by Ansible\n"
+        dest: /tmp/acme-db/status.txt
+        mode: '0644'

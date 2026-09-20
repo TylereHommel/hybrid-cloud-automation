@@ -1,0 +1,12 @@
+---
+aws:
+  children:
+    webservers:
+      hosts:
+        web01:
+          ansible_connection: local
+
+    databases:
+      hosts:
+        db01:
+          ansible_connection: local
