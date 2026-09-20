@@ -1,0 +1,12 @@
+---
+
+- name: Render VLAN Configuration
+  hosts: switches
+  gather_facts: false
+
+  tasks:
+    - name: Render VLANs configuration
+      ansible.builtin.template:
+        src: ../templates/vlans.j2
+        dest: "../rendered-configs/{{ inventory_hostname }}-vlans.cfg" 
+      delegate_to: localhost 
