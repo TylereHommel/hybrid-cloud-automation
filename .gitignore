@@ -12,11 +12,11 @@ __pycache__/
 *.vault
 .env
 
-# Terraform - for later
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
-.terraform.lock.hcl
+terraform/*.txt
 
 # OS/editor junk
 .DS_Store
